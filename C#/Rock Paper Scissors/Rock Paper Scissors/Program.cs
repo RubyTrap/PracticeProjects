@@ -1,43 +1,46 @@
-﻿using System.Runtime.InteropServices;
+﻿namespace Rock_Paper_Scissors;
 
-namespace Rock_Paper_Scissors;
+enum Hand
+{
+    Rock, 
+    Paper, 
+    Scissors
+}
 
 class Program
 {
-    static string GetAiHand()
+    static Hand GetAiHand()
     {
-        Random rnd = new Random();
-        int rndInt = rnd.Next(1, 4);
+        int rndInt = Random.Shared.Next(1, 4);
         switch (rndInt)
         {
-            case 1:
-                return "rock";
+            case 1: 
+                return Hand.Rock;
             case 2:
-                return "paper";
-            case 3:
-                return "scissors";
+                return Hand.Paper;
             default:
-                throw new Exception("Computer never assigned variable hand");
+            case 3:
+                return Hand.Scissors;
         }
     }
     
-    static string GetPlayerHand()
+    static Hand GetPlayerHand()
     {
         while (true)
         {
             Console.Write("Enter ROCK, PAPER, or SCISSORS: ");
-            string plrInput = Console.ReadLine()!;
+            string plrInput = Console.ReadLine() ?? "";
             switch (plrInput.ToLower().Trim())
             {
                 case "rock":
                 case "r":
-                    return "rock";
+                    return Hand.Rock;
                 case "paper":
                 case "p":
-                    return "paper";
+                    return Hand.Paper;
                 case "scissors":
                 case "s":
-                    return "scissors";
+                    return Hand.Scissors;
                 default:
                     Console.WriteLine("Invalid Input");
                     break;
@@ -45,15 +48,15 @@ class Program
         }
     }
 
-    static void CheckWinState((string player, string computer) hands)
+    static void CheckWinState(Hand player, Hand computer)
     {
-        if (hands.player == hands.computer)
+        if (player == computer)
         {
             Console.WriteLine("It's a draw");
         }
-        else if (hands.player == "rock" && hands.computer == "scissors" ||
-                 hands.player == "paper" && hands.computer == "rock" ||
-                 hands.player == "scissors" && hands.computer == "paper")
+        else if (player == Hand.Rock && computer == Hand.Scissors ||
+                 player == Hand.Paper && computer == Hand.Rock ||
+                 player == Hand.Scissors && computer == Hand.Paper)
         {
             Console.WriteLine("You win");
         }
@@ -64,28 +67,28 @@ class Program
         
     }
 
-    static Boolean InputPlayAgain()
+    static bool InputPlayAgain()
     {
         while (true)
         {
             Console.Write("Would you like to play again (Y/N): ");
-            string? plrInput = Console.ReadLine();
-            if (plrInput == null)
+            string plrInput = Console.ReadLine() ?? "";
+            if (plrInput == "")
             {
-                throw new Exception("InputPlayAgain plrInput variable returned null");
-            }
-            switch (plrInput.ToLower().Trim())
-            {
-                case "y":
-                case"yes":
-                    return true;
-                case "n":
-                case "no":
-                    Console.Write("thanks for playing");
-                    return false;
+                continue;
             }
 
-            Console.WriteLine("Please enter valid input n/y or no/yes");
+            switch(plrInput[0])
+            {
+                case 'y':
+                    return true;
+                case 'n':
+                    Console.Write("Thanks for playing");
+                    return false;
+                default:
+                    Console.WriteLine("Please enter valid input N/Y");
+                    break;
+            }
         }
     }
     
@@ -95,9 +98,9 @@ class Program
         {
             var aiHand = GetAiHand();
             var playerHand = GetPlayerHand();
-            Console.WriteLine("Player: " + playerHand.ToUpper());
-            Console.WriteLine("Computer: " + aiHand.ToUpper());
-            CheckWinState((playerHand, aiHand));
+            Console.WriteLine("Player: " + playerHand.ToString().ToUpper());
+            Console.WriteLine("Computer: " + aiHand.ToString().ToUpper());
+            CheckWinState(playerHand, aiHand);
         } while (InputPlayAgain());
     }
 }
