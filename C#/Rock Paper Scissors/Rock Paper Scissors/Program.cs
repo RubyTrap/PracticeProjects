@@ -1,4 +1,6 @@
-﻿namespace Rock_Paper_Scissors;
+﻿using System;
+
+namespace Rock_Paper_Scissors;
 
 enum Hand
 {
