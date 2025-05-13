@@ -1,0 +1,15 @@
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/bin/Debug/net9.0/Rock Paper Scissors
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/bin/Debug/net9.0/Rock Paper Scissors.deps.json
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/bin/Debug/net9.0/Rock Paper Scissors.runtimeconfig.json
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/bin/Debug/net9.0/Rock Paper Scissors.dll
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/bin/Debug/net9.0/Rock Paper Scissors.pdb
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/obj/Debug/net9.0/Rock Paper Scissors.GeneratedMSBuildEditorConfig.editorconfig
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/obj/Debug/net9.0/Rock Paper Scissors.AssemblyInfoInputs.cache
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/obj/Debug/net9.0/Rock Paper Scissors.AssemblyInfo.cs
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/obj/Debug/net9.0/Rock Paper Scissors.csproj.CoreCompileInputs.cache
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/obj/Debug/net9.0/Rock Paper Scissors.sourcelink.json
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/obj/Debug/net9.0/Rock Paper Scissors.dll
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/obj/Debug/net9.0/refint/Rock Paper Scissors.dll
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/obj/Debug/net9.0/Rock Paper Scissors.pdb
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/obj/Debug/net9.0/Rock Paper Scissors.genruntimeconfig.cache
+/home/ruby/Code/PracticeProjects/C#/Rock Paper Scissors/Rock Paper Scissors/obj/Debug/net9.0/ref/Rock Paper Scissors.dll

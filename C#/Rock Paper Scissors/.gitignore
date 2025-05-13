@@ -1,0 +1,4 @@
+*.user
+.idea/
+NumberGuessingGame/bin/
+NumberGuessingGame/obj/
