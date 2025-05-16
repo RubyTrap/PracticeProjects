@@ -1,4 +1,5 @@
-﻿using System.Runtime.InteropServices;
+﻿using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace Rock_Paper_Scissors;
 
@@ -20,9 +21,10 @@ class Program
                 return Hand.Rock;
             case 2:
                 return Hand.Paper;
-            default:
             case 3:
                 return Hand.Scissors;
+            default:
+                throw new UnreachableException();
         }
     }
     
@@ -31,20 +33,22 @@ class Program
         while (true)
         {
             Console.Write("Enter ROCK, PAPER, or SCISSORS: ");
-            string plrInput = Console.ReadLine() ?? "";
-            switch (plrInput.ToLower().Trim())
+            string playerInput = Console.ReadLine() ?? "";
+            if (playerInput == "")
             {
-                case "rock":
-                case "r":
+                Console.WriteLine("Please enter a valid input rock paper or scissors");
+                continue;
+            }
+            switch (playerInput.ToLower().Trim()[0])
+            {
+                case 'r':
                     return Hand.Rock;
-                case "paper":
-                case "p":
+                case 'p':
                     return Hand.Paper;
-                case "scissors":
-                case "s":
+                case 's':
                     return Hand.Scissors;
                 default:
-                    Console.WriteLine("Invalid Input");
+                    Console.WriteLine("Please enter a valid input rock paper or scissors");
                     break;
             }
         }
@@ -74,21 +78,22 @@ class Program
         while (true)
         {
             Console.Write("Would you like to play again (Y/N): ");
-            string plrInput = Console.ReadLine() ?? "";
-            if (plrInput == "")
+            string playerInput = Console.ReadLine() ?? "";
+            if (playerInput == "")
             {
                 continue;
             }
 
-            switch(plrInput[0])
+            switch(playerInput.Trim().ToLower()[0])
             {
                 case 'y':
                     return true;
                 case 'n':
+                    Console.WriteLine("Please enter valid input Y/N");
                     Console.Write("Thanks for playing");
                     return false;
                 default:
-                    Console.WriteLine("Please enter valid input N/Y");
+                    Console.WriteLine("Please enter valid input Y/N");
                     break;
             }
         }
