@@ -1,7 +1,4 @@
-﻿/* To-Do
-    tracking/counting opening and closing parenthesis
-*/
-using System.Text.RegularExpressions;
+﻿using System.Text.RegularExpressions;
 using System.Globalization;
 
 
